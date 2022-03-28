@@ -1,4 +1,4 @@
-# 🎬 Audio Visualizer
+# 🎵 Audio Visualizer
 
 ## About This App
 
