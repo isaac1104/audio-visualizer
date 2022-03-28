@@ -1,6 +1,4 @@
-import React from 'react';
-import ReactPlayer from 'react-player';
-import { Image, Title } from '@mantine/core';
+import { Image } from '@mantine/core';
 
 import useStore from 'src/store';
 
@@ -11,13 +9,13 @@ const MusicPlayer = () => {
 
   return (
     <div>
-      <Image
-        radius='md'
-        src={albumPath}
-        fit='contain'
-        caption={<Title order={1}>{title}</Title>}
+      <Image radius='md' src={albumPath} fit='contain' />
+      <audio
+        controls
+        src={audioPath}
+        id='audio-element'
+        style={{ width: '100%' }}
       />
-      <ReactPlayer controls url={audioPath} height={100} />
     </div>
   );
 };

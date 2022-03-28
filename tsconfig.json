@@ -2,7 +2,8 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "src": ["src"]
+      "src": ["src"],
+      "react-audio-spectrum": ["./src/local-types/react-audio-spectrum"]
     },
     "target": "es5",
     "lib": [
@@ -26,5 +27,13 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/local-types/**"
+  ],
+  "typeRoots": [
+    "node_modules/@types",
+    "src/local-types"
   ]
 }
