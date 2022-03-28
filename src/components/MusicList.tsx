@@ -11,14 +11,14 @@ const MusicList = () => {
   const firstSong = useStore(state => state.songsSlice.data[0]);
 
   useEffect(() => {
-    const { id, title } = firstSong;
-    setSelectedSong(id, title);
+    const { id, audioPath, albumPath, title } = firstSong;
+    setSelectedSong({ id, audioPath, albumPath, title });
   }, [firstSong.id, firstSong.title]);
 
   return (
     <List>
-      {songs.map(({ id, title }) => (
-        <List.Item key={id} onClick={() => setSelectedSong(id, title)}>
+      {songs.map(({ id, audioPath, albumPath, title }) => (
+        <List.Item key={id} onClick={() => setSelectedSong({ id, audioPath, albumPath, title })}>
           {title}
         </List.Item>
       ))}

@@ -7,6 +7,8 @@ export type StoreSlice<T extends object, E extends object = T> = (
 
 export interface SongState {
   id: number;
+  audioPath: string;
+  albumPath: string;
   title: string;
 }
 
@@ -19,7 +21,17 @@ export interface SelectedSongState {
 export interface SongsState {
   songsSlice: {
     data: SongState[];
-    setSelectedSong: (id: number, title: string) => void;
+    setSelectedSong: ({
+      id,
+      audioPath,
+      albumPath,
+      title,
+    }: {
+      id: number;
+      audioPath: string;
+      albumPath: string;
+      title: string;
+    }) => void;
   };
 }
 

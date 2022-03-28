@@ -8,6 +8,8 @@ export const createSelectedSongSlice = (
   selectedSongSlice: {
     data: {
       id: 0,
+      audioPath: '',
+      albumPath: '',
       title: '',
     },
   },
